@@ -1,0 +1,396 @@
+/* LOTUS Logo by @KK
+
+Please have a look at our "#Read-Me-Before-Execution" before applying/customizing of the logo.
+
+*/
+
+/* #Read-Me-Before-Execution
+
+Copy this entire "logo-style.css" and follow the steps below -
+    • Copy and Paste the "#Reqiured-Imports" Section to your CSS Stylesheet.
+    • Copy and Paste the "#Reqiured-HTML" Section to your HTML Page.
+    • Copy and Paste the "#Reqiured-CSS" Section to your CSS Stylesheet.
+
+After following the above steps, here are few things to keep in mind before using the logo
+    • "#Required-CSS" must be pasted after "#Required-Imports" is pasted.
+    • For adjusting the backdrop blur, jump to line number 108 and adjust according to your needs.
+    • For scaling up or down the Logo, jump to line number 116 and scale the logo according to your needs.
+    • For adjusting the box shadow effect, jump to line number 109, 392 and adjust according to your needs.
+    • The "body" must have these three CSS properties for the Logo to fully work -
+        → display: flex;
+        → justify-content: center;
+        → align-items: center;
+
+*/
+
+/* #Required-Imports    (Must be pasted at a ".css" page extension) */
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+/* #Required-HTML (Head)   (Must be pasted at a ".html" page extension)
+
+  <link rel="stylesheet" href="....css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+*/
+
+/* #Required-CSS    (Must be pasted at a ".css" page extension) */
+
+.logo,
+.logo-text,
+.logo-container,
+.logo-container,
+.element-circle,
+.leaf-container,
+.leaves,
+.element-stick {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 20rem;
+    aspect-ratio: 1;
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+    border: none;
+    border-radius: 0 0 3rem 0;
+    background: transparent;
+    backdrop-filter: blur(15px); /* Adjust Backdrop blur from here */
+    box-shadow: 0px 0px 1rem 0.5rem hsl(0, 100%, 0%, 0.75); /* Adjust Box shadow from here */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    transform: scale(0.5); /* Scale Up or Down the Logo from here */
+    transition:
+        box-shadow linear 500ms,
+        border-radius cubic-bezier(0.75, 0, 0.25, 1) 600ms;
+}
+
+.status {
+    width: 20rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    background-color: hsl(350, 100%, 82%);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 10rem 10rem;
+    grid-template-rows: 10rem 10rem;
+    transform: scale(0);
+    transition: transform cubic-bezier(0.75, 0, 0.25, 1) 600ms;
+    z-index: 7;
+}
+
+.all-status {
+    width: 10rem;
+    aspect-ratio: 1;
+    display: flex;
+}
+
+.youtube-status {
+    border-top-left-radius: 10rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.instagram-status {
+    border-top-right-radius: 10rem;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.facebook-status {
+    border-bottom-left-radius: 10rem;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.twitter-status {
+    border-bottom-right-radius: 10rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.youtube-status a {
+    border-right: 0.5px solid #3a3a3a;
+    border-bottom: 0.5px solid #3a3a3a;
+}
+
+.instagram-status a {
+    border-left: 0.5px solid #3a3a3a;
+    border-bottom: 0.5px solid #3a3a3a;
+}
+
+.facebook-status a {
+    border-right: 0.5px solid #3a3a3a;
+    border-top: 0.5px solid #3a3a3a;
+}
+
+.twitter-status a {
+    border-left: 0.5px solid #3a3a3a;
+    border-top: 0.5px solid #3a3a3a;
+}
+
+.all-status a:hover {
+    font-size: 4rem;
+}
+
+.youtube-status a:hover {
+    color: #ff0000;
+}
+
+.instagram-status a:hover {
+    color: #d62976;
+}
+
+.facebook-status a:hover {
+    color: #1877f2;
+}
+
+.twitter-status a:hover {
+    color: black;
+}
+
+.all-status a {
+    width: 7.5rem;
+    aspect-ratio: 1;
+    color: #3a3a3a;
+    font-size: 3rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear 150ms;
+}
+
+.logo-text {
+    width: 20rem;
+    height: 2.5rem;
+    color: hsl(350, 100%, 75%);
+    position: absolute;
+    font-size: 2.5em;
+    font-family:
+        "Varela Round", "Josefin Sans", "Poppins", "Rockwell", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    word-spacing: -0.25em;
+    filter: drop-shadow(0 0 1em hsl(350, 100%, 80%));
+    text-shadow:
+        0 0 0.75em hsl(350, 100%, 80%, 1),
+        0 0 0.1em hsl(0, 0%, 100%, 0.1);
+    transition: all cubic-bezier(0.75, 0, 0.25, 1) 750ms;
+    z-index: 1;
+}
+
+.logo-container {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.element-container {
+    width: 20rem;
+    height: 10rem;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    z-index: 2;
+}
+
+.logo-element {
+    --pink-light: hsl(350, 100%, 85%);
+    --pink-dark: hsl(350, 100%, 72%);
+    width: 8em;
+    aspect-ratio: 1;
+    position: absolute;
+    background: linear-gradient(
+        45deg,
+        var(--pink-dark),
+        var(--pink-light),
+        var(--pink-light),
+        var(--pink-light),
+        var(--pink-dark)
+    );
+    border: 1px solid var(--pink-dark);
+    border-radius: 100% 0;
+    transition: transform cubic-bezier(0, 0.6, 1, 1) 500ms;
+}
+
+.element-circle {
+    width: 4.5rem;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 4rem;
+    background: hsl(350, 100%, 72%);
+    border-radius: 50%;
+    z-index: 4;
+    filter: blur(10px);
+}
+
+.element-left {
+    left: 4.25rem;
+    bottom: 0.75rem;
+    transform: rotateZ(-75deg);
+    z-index: 5;
+}
+
+.element-mid-left {
+    left: 5.45rem;
+    bottom: 1.25rem;
+    transform: rotateZ(-60deg);
+    z-index: 3;
+}
+
+.element-mid {
+    bottom: 1.4rem;
+    transform: rotateZ(-45deg);
+    z-index: 4;
+}
+
+.element-mid-right {
+    right: 5.4rem;
+    bottom: 1.25rem;
+    transform: rotateZ(-30deg);
+    z-index: 3;
+}
+
+.element-right {
+    right: 4.22rem;
+    bottom: 0.8rem;
+    transform: rotateZ(-15deg);
+    z-index: 5;
+}
+
+.leaf-container {
+    width: 20rem;
+    height: 10rem;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    z-index: 6;
+}
+
+.leaves {
+    --green-light: hsl(85, 100%, 24%);
+    --green-dark: hsl(85, 100%, 21%);
+    width: 4.5rem;
+    aspect-ratio: 1;
+    position: absolute;
+    background: linear-gradient(
+        -45deg,
+        var(--green-dark),
+        var(--green-dark),
+        var(--green-light),
+        var(--green-dark),
+        var(--green-dark)
+    );
+    border: 1px solid var(--green-dark);
+    border-radius: 100% 0;
+    transition: transform cubic-bezier(0, 0.6, 1, 1) 500ms;
+}
+
+.leaf-1 {
+    left: 5.4rem;
+    bottom: -0.6rem;
+    transform: rotateZ(-95deg);
+    z-index: 7;
+}
+
+.leaf-2 {
+    left: 6.7rem;
+    bottom: 0.3rem;
+    transform: rotateZ(-65deg);
+    z-index: 8;
+}
+
+.leaf-3 {
+    right: 6.7rem;
+    bottom: 0.3rem;
+    transform: rotateZ(-25deg);
+    z-index: 8;
+}
+
+.leaf-4 {
+    right: 5.4rem;
+    bottom: -0.6rem;
+    transform: rotateZ(5deg);
+    z-index: 7;
+}
+
+.element-stick {
+    width: 0.5rem;
+    height: 2rem;
+    position: absolute;
+    bottom: 3.75rem;
+    background: hsl(85, 100%, 24%);
+    border: 1px solid hsl(85, 100%, 21%);
+    border-radius: 0rem 0rem 0.25rem 0.25rem;
+    z-index: 5;
+}
+
+/* Hover & Focus Effects */
+
+.logo:hover {
+    box-shadow:
+        0 0 1rem 0.5rem hsla(0, 100%, 0%, 0.75),
+        inset 0px 0px 1rem 0.5rem hsl(350, 100%, 70%, 0.75); /* Adjust Box shadow from here */
+}
+
+.logo:hover .logo-text {
+    word-spacing: 0.5em;
+    transform: translateY(-3em);
+}
+
+.logo:hover .element-left {
+    transform: translateX(-0.9rem) translateY(0.75rem) rotateZ(-90deg);
+}
+
+.logo:hover .element-mid-left {
+    transform: translateX(-0.6rem) translateY(0.25rem) rotateZ(-67.5deg);
+}
+
+.logo:hover .element-mid-right {
+    transform: translateX(0.6rem) translateY(0.25rem) rotateZ(-22.5deg);
+}
+
+.logo:hover .element-right {
+    transform: translateX(0.9rem) translateY(0.8rem) rotateZ(0deg);
+}
+
+.logo:hover .leaf-1 {
+    transform: translateX(-0.5rem) translateY(0.9rem) rotateZ(-115deg);
+}
+
+.logo:hover .leaf-2 {
+    transform: translateX(-0.5rem) translateY(0.2rem) rotateZ(-75deg);
+}
+
+.logo:hover .leaf-3 {
+    transform: translateX(0.5rem) translateY(0.2rem) rotateZ(-15deg);
+}
+
+.logo:hover .leaf-4 {
+    transform: translateX(0.5rem) translateY(0.9rem) rotateZ(25deg);
+}
+
+.logo:focus {
+    border-radius: 50%;
+}
+
+.logo:focus .status {
+    transform: scale(1);
+}
