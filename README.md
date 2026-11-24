@@ -80,15 +80,9 @@ Sort-the-Numbers/
 
 ## 📸 Preview
 
-| Wood Theme                             | Sunset Theme                               |
-| -------------------------------------- | ------------------------------------------ |
-| ![Wood theme](images/preview-wood.png) | ![Sunset theme](images/preview-sunset.png) |
-
-| Win Screen                            | Mobile                                    |
-| ------------------------------------- | ----------------------------------------- |
-| ![Win screen](images/preview-win.png) | ![Mobile view](images/preview-mobile.png) |
-
-> Save your screenshots in `images/` with these names, or update the paths above.
+| Wood Theme                            | Sunset Theme                            |
+| ------------------------------------- | --------------------------------------- |
+| ![Wood theme](images/background1.jpg) | ![Sunset theme](images/background2.jpg) |
 
 ## 📄 License
 
@@ -103,6 +97,6 @@ Copyright (c) 2024-2026 Koustab Koley
 **Koustab Koley**
 
 - GitHub: [@KoustabK2006](https://github.com/KoustabK2006/)
-- LinkedIn: [koustab-koley](https://www.linkedin.com/in/koustab-koley/)
+- LinkedIn: [Koustab Koley](https://www.linkedin.com/in/koustab-koley/)
 
 ⭐ If you enjoyed the game, consider giving the repo a star!
