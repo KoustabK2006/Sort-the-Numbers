@@ -217,6 +217,7 @@ hr {
 }
 
 .frame {
+    padding: 40px;
     width: 40rem;
     height: 50rem;
     margin-top: 10vh;
@@ -327,6 +328,7 @@ hr {
    Responsive Media Queries
    ========================================= */
 
+/* Adjust header and frame on medium/tablet screens */
 @media (max-width: 1024px) {
     .container {
         width: 34rem;
@@ -340,33 +342,36 @@ hr {
     hr {
         width: 320px;
     }
-    .logo {
-        transform: scale(0.42);
-        top: -6rem;
-        left: -6rem;
-    }
-    .loader {
-        width: 6rem;
-        font-size: 36px;
+    .frame {
+        margin-top: 12vh;
     }
 }
 
+/* Remove header and adjust layout when width is <= 820px */
 @media (max-width: 820px) {
     .container {
         display: none;
     }
     .logo {
         transform: scale(0.38);
-        top: -6.5rem;
-        left: -6.5rem;
+        top: -6.2rem;
+        left: -6.2rem;
     }
     .loader {
         width: 5.5rem;
         font-size: 32px;
         border-radius: 0px 0px 0px 3rem;
     }
+    .basket {
+        align-items: flex-end;
+    }
     .frame {
-        margin-top: 2rem;
+        width: 44rem;
+        height: 52rem;
+        transform: scale(0.78);
+        transform-origin: bottom center;
+        margin-top: 0;
+        margin-bottom: 2vh;
     }
     .pop-up {
         width: 90vw;
@@ -396,53 +401,57 @@ hr {
     }
 }
 
-@media (max-width: 680px) {
-    html {
-        font-size: 13px;
-    }
-    .frame {
-        width: 96vw;
-        max-width: 40rem;
-        margin-top: 1rem;
-    }
+@media (max-width: 640px) {
     .logo {
-        transform: scale(0.32);
-        top: -7.2rem;
-        left: -7.2rem;
+        transform: scale(0.38);
+        top: -6.2rem;
+        left: -6.2rem;
     }
     .loader {
-        width: 5rem;
-        font-size: 28px;
-        border-radius: 0px 0px 0px 2.5rem;
+        width: 5.5rem;
+        font-size: 32px;
+        border-radius: 0px 0px 0px 3rem;
+    }
+    .frame {
+        width: 45rem;
+        transform: scale(0.7);
+        margin-bottom: 7.5vh;
     }
 }
 
-@media (max-width: 480px) {
-    html {
-        font-size: 11px;
-    }
+@media (max-width: 500px) {
     .logo {
-        transform: scale(0.28);
-        top: -7.8rem;
-        left: -7.8rem;
+        transform: scale(0.38);
+        top: -6.2rem;
+        left: -6.2rem;
     }
     .loader {
-        width: 4.5rem;
-        font-size: 24px;
-        border-radius: 0px 0px 0px 2rem;
+        width: 5.5rem;
+        font-size: 32px;
+        border-radius: 0px 0px 0px 3rem;
     }
     .frame {
-        margin-top: 0.5rem;
-        box-shadow: 0px 0px 15px 5px #00000060;
+        width: 45rem;
+        transform: scale(0.62);
+        margin-bottom: 10vh;
     }
-    .box h1 {
-        font-size: 34px;
+}
+
+@media (max-width: 420px) {
+    .logo {
+        transform: scale(0.32);
+        top: -6.8rem;
+        left: -6.8rem;
     }
-    .box h2 {
-        font-size: 22px;
+    .loader {
+        width: 4.8rem;
+        font-size: 28px;
+        border-radius: 0px 0px 0px 2.5rem;
     }
-    .box h3 {
-        font-size: 16px;
+    .frame {
+        width: 45rem;
+        transform: scale(0.55);
+        margin-bottom: 15vh;
     }
     .continue,
     .play-again {
@@ -453,13 +462,33 @@ hr {
 }
 
 @media (max-width: 360px) {
-    html {
-        font-size: 9.5px;
+    .logo {
+        transform: scale(0.28);
+        top: -7.2rem;
+        left: -7.2rem;
+    }
+    .loader {
+        width: 4.2rem;
+        font-size: 24px;
+        border-radius: 0px 0px 0px 2.2rem;
+    }
+    .frame {
+        width: 45rem;
+        transform: scale(0.48);
+        margin-bottom: 18vh;
+    }
+}
+
+/* Extra safety for short landscape / short screens */
+@media (max-height: 600px) {
+    .frame {
+        transform: scale(0.5);
+        margin-bottom: 1vh;
     }
     .logo {
-        transform: scale(0.24);
-        top: -8.5rem;
-        left: -8.5rem;
+        transform: scale(0.25);
+        top: -7.5rem;
+        left: -7.5rem;
     }
     .loader {
         width: 4rem;
