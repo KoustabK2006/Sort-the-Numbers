@@ -86,7 +86,7 @@ Sort-the-Numbers/
 
 ## 📄 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the [MIT License](LICENSE).
 
 ```
 Copyright (c) 2024-2026 Koustab Koley
