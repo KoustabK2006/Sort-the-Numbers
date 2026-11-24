@@ -29,8 +29,6 @@ Slide the tiles around the 4×4 grid and arrange them from **1 to 15**. Every ti
     ```
 3. **Run the game** by opening `index.html` in your browser, or use a local server (e.g. the VS Code Live Server extension).
 
-> No build tools or dependencies needed. Fonts and icons load from Google Fonts and Font Awesome CDNs, so an internet connection is required.
-
 ## 🧩 Usage
 
 | Control        | Action                                   |
