@@ -322,3 +322,147 @@ hr {
     font-size: 8rem;
     color: #000000aa;
 }
+
+/* =========================================
+   Responsive Media Queries
+   ========================================= */
+
+@media (max-width: 1024px) {
+    .container {
+        width: 34rem;
+    }
+    .heading {
+        font-size: 32px;
+    }
+    .credits {
+        font-size: 20px;
+    }
+    hr {
+        width: 320px;
+    }
+    .logo {
+        transform: scale(0.42);
+        top: -6rem;
+        left: -6rem;
+    }
+    .loader {
+        width: 6rem;
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 820px) {
+    .container {
+        display: none;
+    }
+    .logo {
+        transform: scale(0.38);
+        top: -6.5rem;
+        left: -6.5rem;
+    }
+    .loader {
+        width: 5.5rem;
+        font-size: 32px;
+        border-radius: 0px 0px 0px 3rem;
+    }
+    .frame {
+        margin-top: 2rem;
+    }
+    .pop-up {
+        width: 90vw;
+        height: auto;
+        max-width: 600px;
+    }
+    .box {
+        width: 95%;
+        height: auto;
+        padding: 2.5rem 1.5rem;
+    }
+    .box h1 {
+        font-size: 42px;
+    }
+    .box h2 {
+        font-size: 28px;
+    }
+    .box h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .continue,
+    .play-again {
+        width: 170px;
+        height: 50px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 680px) {
+    html {
+        font-size: 13px;
+    }
+    .frame {
+        width: 96vw;
+        max-width: 40rem;
+        margin-top: 1rem;
+    }
+    .logo {
+        transform: scale(0.32);
+        top: -7.2rem;
+        left: -7.2rem;
+    }
+    .loader {
+        width: 5rem;
+        font-size: 28px;
+        border-radius: 0px 0px 0px 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 11px;
+    }
+    .logo {
+        transform: scale(0.28);
+        top: -7.8rem;
+        left: -7.8rem;
+    }
+    .loader {
+        width: 4.5rem;
+        font-size: 24px;
+        border-radius: 0px 0px 0px 2rem;
+    }
+    .frame {
+        margin-top: 0.5rem;
+        box-shadow: 0px 0px 15px 5px #00000060;
+    }
+    .box h1 {
+        font-size: 34px;
+    }
+    .box h2 {
+        font-size: 22px;
+    }
+    .box h3 {
+        font-size: 16px;
+    }
+    .continue,
+    .play-again {
+        width: 130px;
+        height: 42px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 360px) {
+    html {
+        font-size: 9.5px;
+    }
+    .logo {
+        transform: scale(0.24);
+        top: -8.5rem;
+        left: -8.5rem;
+    }
+    .loader {
+        width: 4rem;
+        font-size: 20px;
+    }
+}
