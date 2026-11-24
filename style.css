@@ -167,7 +167,7 @@ body {
 }
 
 .container:hover hr {
-    width: 310px;
+    width: 300px;
 }
 
 .header {
@@ -199,13 +199,13 @@ body {
 hr {
     margin-top: 5px;
     height: 10px;
-    width: 500px;
+    width: 400px;
     border: none;
     border-top: 1px solid #333;
     color: #000000;
     overflow: visible;
     text-align: center;
-    transition: all ease-out 500ms;
+    transition: all ease-out 400ms;
 }
 
 .basket {
