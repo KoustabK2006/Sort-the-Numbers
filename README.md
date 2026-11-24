@@ -78,9 +78,9 @@ Sort-the-Numbers/
 
 ## 📸 Preview
 
-| Wood Theme                            | Sunset Theme                            |
-| ------------------------------------- | --------------------------------------- |
-| ![Wood theme](images/background1.jpg) | ![Sunset theme](images/background2.jpg) |
+| Sunset Theme                       | Wood Theme                     |
+| ---------------------------------- | ------------------------------ |
+| ![Sunset theme](images/sunset.png) | ![Wood theme](images/wood.png) |
 
 ## 📄 License
 
