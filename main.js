@@ -310,7 +310,9 @@ function matchedBoxes() {
             for (let j = 0; j < 4; j++) {
                 let index = i * 4 + j + 1;
                 try {
-                    if (pattern[i][j] == array[i][j]) {
+                    if (pattern[i][j] == "block") {
+                        document.querySelector("#index" + index).style.boxShadow = "none";
+                    } else if (pattern[i][j] == array[i][j]) {
                         document.querySelector("#index" + index).style.color =
                             "#22FF22CC";
                         document.querySelector(
@@ -323,8 +325,6 @@ function matchedBoxes() {
                         document.querySelector(
                             "#index" + index,
                         ).style.boxShadow = "inset 0px 0px 20px 0px #000000AA";
-                        document.querySelector(".numblock").style.boxShadow =
-                            "0px 0px 0px #000";
                     }
                 } catch (exception) {}
             }
